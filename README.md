@@ -71,7 +71,31 @@ I decided use nodemailer because I had a account with other provider (mandrillap
 - Admin zone (http://localhost:3000/en/admin/dashboard)
 
 ## Integrations
-- Sentry
-- Google Analytics
-- Vercel Analytics
-- Email sending (nodemailer)
+
+### Sentry 
+  - Monitoring service. https://sentry.io/welcome/
+  - Veri useful for tracking errors in production.
+
+
+### Google Analytics
+  - Track visits and other events. https://analytics.google.com/analytics/web/
+
+
+### Vercel Analytics
+  - Analytics for Vercel. https://vercel.com/docs/analytics
+  
+
+### Email sending with Nodemailer
+  - Email integration. It capable of use many email providers (sendgrid, mandrillapp, ...) https://nodemailer.com/about/
+
+
+
+# Useful links
+
+### Google Analytics with Next13
+
+https://www.youtube.com/watch?v=1p9l0TqixRI
+
+https://gaudion.dev/blog/setup-google-analytics-with-gdpr-compliant-cookie-consent-in-nextjs13
+
+
