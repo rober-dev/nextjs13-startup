@@ -58,7 +58,7 @@ I decided use nodemailer because I had a account with other provider (mandrillap
 
 ## Pages
 
-## Layout
+### Layout
   With language switche and dark mode switcher.
 
 ### Contact page 
