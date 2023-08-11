@@ -1,31 +1,20 @@
 'use client';
 
-import { Fragment, useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
+import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon,
   Cog6ToothIcon,
-  FolderIcon,
   HomeIcon,
-  UsersIcon,
   XMarkIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { useChangeLocale, useCurrentLocale, useI18n } from '@/locales/client';
-import { Moon as MoonIcon, Sun as SunIcon } from 'lucide-react';
+
+import { useCurrentLocale, useI18n } from '@/locales/client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import { cn } from '@/lib/utils';
 import SwitchTheme from '@/components/shared/theme/SwitchTheme';
 import SwitchLng from '@/components/shared/language/SwitchLng';
 
@@ -36,13 +25,8 @@ export default function AdminLayout({
 }) {
   const t = useI18n();
   const lng = useCurrentLocale();
-  const changeLocale = useChangeLocale();
 
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  useEffect(() => setMounted(true), []);
 
   const navigation = [
     {
@@ -50,36 +34,6 @@ export default function AdminLayout({
       href: `/${lng}/admin/dashboard}`,
       icon: HomeIcon,
       current: true,
-    },
-    {
-      name: t('courses'),
-      href: `/${lng}/admin/courses}`,
-      icon: UsersIcon,
-      current: false,
-    },
-    {
-      name: t('participants'),
-      href: `/${lng}/admin/participants}`,
-      icon: FolderIcon,
-      current: false,
-    },
-    {
-      name: t('signers'),
-      href: `/${lng}/admin/signers}`,
-      icon: CalendarIcon,
-      current: false,
-    },
-    {
-      name: t('templates'),
-      href: `/${lng}/admin/templates}`,
-      icon: CalendarIcon,
-      current: false,
-    },
-    {
-      name: t('invoices'),
-      href: `/${lng}/admin/invoices}`,
-      icon: CalendarIcon,
-      current: false,
     },
   ];
 
@@ -154,14 +108,17 @@ export default function AdminLayout({
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className='flex grow flex-col gap-y-5 overflow-y-auto bg-slate-900 px-6 pb-4 ring-1 ring-white/10'>
                   <div className='flex h-16 shrink-0 items-center'>
-                    <Image
+                    {/* <Image
                       className='-ml-1 h-12 w-auto'
-                      src={`/img/sinaturas-h-240-white.png`}
+                      src={`/img/logo.png`}
                       priority={true}
-                      alt='Sinaturas'
+                      alt='Company name'
                       width={240}
                       height={60}
-                    />
+                    /> */}
+                    <h1 className='text-3xl font-bold -ml-1 h-12 w-auto text-slate-900 dark:text-slate-100'>
+                      Image/logo
+                    </h1>
                   </div>
                   <nav className='flex flex-1 flex-col'>
                     <ul role='list' className='flex flex-1 flex-col gap-y-7'>
@@ -239,14 +196,17 @@ export default function AdminLayout({
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className='flex grow flex-col gap-y-5 overflow-y-auto bg-slate-900 dark:bg-slate-950 px-6 pb-4'>
           <div className='flex h-20 shrink-0 items-center'>
-            <Image
+            {/* <Image
               priority={true}
               className='-ml-1 h-12 w-auto'
-              src={`/img/sinaturas-h-240-white.png`}
-              alt='Sinaturas'
+              src={`/img/logo.png`}
+              alt='Company Name'
               width={240}
               height={60}
-            />
+            /> */}
+            <h1 className='text-3xl font-bold -ml-1 h-12 w-auto text-slate-900 dark:text-slate-100'>
+              Image/logo
+            </h1>
           </div>
           <nav className='flex flex-1 flex-col'>
             <ul role='list' className='flex flex-1 flex-col gap-y-7'>

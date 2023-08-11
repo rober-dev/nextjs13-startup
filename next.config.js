@@ -27,8 +27,8 @@ module.exports = withSentryConfig(
     // Suppresses source map uploading logs during build
     silent: true,
 
-    org: 'sinaturas',
-    project: 'dev-sinaturas-com',
+    org: 'xxx',
+    project: 'xxx',
   },
   {
     // For all available options, see:

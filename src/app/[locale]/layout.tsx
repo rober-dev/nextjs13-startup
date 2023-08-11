@@ -11,8 +11,8 @@ import GoogleAnalytics from '@/components/shared/google-analytics/GoogleAnalytic
 import CookieBanner from '@/components/shared/google-analytics/CookieBanner';
 
 export const metadata: Metadata = {
-  title: 'Sinaturas.com',
-  description: 'Emisión, firma, entrega y verificación electrónica',
+  title: 'domain.com',
+  description: 'page description',
 };
 
 export default function RootLayout({

@@ -69,20 +69,6 @@ export default function SentryClientPage() {
         >
           Throw error!
         </button>
-
-        <p>
-          Next, look for the error on the{' '}
-          <a href='https://sinaturas.sentry.io/issues/?project=4505683592282112'>
-            Issues Page
-          </a>
-          .
-        </p>
-        <p style={{ marginTop: '24px' }}>
-          For more information, see{' '}
-          <a href='https://docs.sentry.io/platforms/javascript/guides/nextjs/'>
-            https://docs.sentry.io/platforms/javascript/guides/nextjs/
-          </a>
-        </p>
       </main>
     </div>
   );
